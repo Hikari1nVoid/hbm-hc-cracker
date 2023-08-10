@@ -10,7 +10,8 @@ import java.util.Random;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.logging.log4j.Level;
-private String smoosh(String s1, String s2, String s3, String s4) {
+public class Crackmethod{
+public String smoosh(String s1, String s2, String s3, String s4) {
 		
 		Random rand = new Random();
 		String s = "";
@@ -47,7 +48,7 @@ private String smoosh(String s1, String s2, String s3, String s4) {
 		return getHash(s);
 	}
 	
-	private String getHash(String inp) {
+	public String getHash(String inp) {
 		
 		try {
 			MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
@@ -63,10 +64,11 @@ private String smoosh(String s1, String s2, String s3, String s4) {
 		
 		return "";
 	}
-
-private static final String answer = "41eb77f138ce350932e33b6b26b233df9aad0c0c80c6a49cb9a54ddd8fae3f83";
+}
+}
 Public class main{
   public static void main(){
+private static final String answer = "41eb77f138ce350932e33b6b26b233df9aad0c0c80c6a49cb9a54ddd8fae3f83";
     List<String> list = new ArrayList<String>();
     list.add("a");
     list.add("b");
@@ -98,7 +100,7 @@ Public class main{
       for(b in list){
         for(c in list){
           for(d in list){
-            String result = smoosh(a,b,c,d);
+            String result = Crackmethod.smoosh(a,b,c,d);
             if(result.equals(answer)) {
               System.out.Println(a,b,c,d);
             }
@@ -107,3 +109,4 @@ Public class main{
       }
     }
   }
+}
