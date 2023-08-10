@@ -13,48 +13,36 @@ import java.lang.String;
 public  class main{
   public static void main(String[] args){
 String answer = "41eb77f138ce350932e33b6b26b233df9aad0c0c80c6a49cb9a54ddd8fae3f83";
-    List<String> list = new ArrayList<String>();
-    list.add("a");
-    list.add("b");
-    list.add("c");
-    list.add("d");
-    list.add("e");
-    list.add("f");
-    list.add("g");
-    list.add("h");
-    list.add("i");
-    list.add("j");
-    list.add("k");
-    list.add("l");
-    list.add("m");
-    list.add("n");
-    list.add("o");
-    list.add("p");
-    list.add("q");
-    list.add("r");
-    list.add("s");
-    list.add("t");
-    list.add("u");
-    list.add("v");
-    list.add("w");
-    list.add("x");
-    list.add("y");
-    list.add("z");
-    for(String a : list){
-      for(String b: list){
-        for(String c : list){
-          for(String d: list){
+    String[] periodicTable = {
+      "Ghiorsium","Hydrogen","deuterium","tritium", "Helium", "Lithium", "Beryllium", "Boron", "Carbon", "Nitrogen", "Oxygen",
+      "Fluorine", "Neon", "Sodium", "Magnesium", "Aluminum", "Silicon", "Phosphorus", "Sulfur",
+      "Chlorine", "Argon", "Potassium", "Calcium", "Scandium", "Titanium", "Vanadium", "Chromium",
+      "Manganese", "Iron", "Cobalt", "Nickel", "Copper", "Zinc", "Gallium", "Germanium", "Arsenic",
+      "Selenium", "Bromine", "Krypton", "Rubidium", "Strontium", "Yttrium", "Zirconium", "Niobium",
+      "Molybdenum", "Technetium", "Ruthenium", "Rhodium", "Palladium", "Silver", "Cadmium", "Indium",
+      "Tin", "Antimony", "Tellurium", "Iodine", "Xenon", "Cesium", "Barium", "Lanthanum", "Cerium",
+      "Praseodymium", "Neodymium", "Promethium", "Samarium", "Europium", "Gadolinium", "Terbium",
+      "Dysprosium", "Holmium", "Erbium", "Thulium", "Ytterbium", "Lutetium", "Hafnium", "Tantalum",
+      "Tungsten", "Rhenium", "Osmium", "Iridium", "Platinum", "Gold", "Mercury", "Thallium", "Lead",
+      "Bismuth", "Polonium", "Astatine", "Radon", "Francium", "Radium", "Actinium", "Thorium", "Protactinium",
+      "Uranium", "Neptunium", "Plutonium", "Americium", "Curium", "Berkelium", "Californium", "Einsteinium",
+      "Fermium", "Mendelevium", "Nobelium", "Lawrencium", "Rutherfordium", "Dubnium", "Seaborgium",
+      "Bohrium", "Hassium", "Meitnerium", "Darmstadtium", "Roentgenium", "Copernicium", "Nihonium",
+      "Flerovium", "Moscovium", "Livermorium", "Tennessine", "Oganesson"
+      };
+        for(String e: periodicTable){
             
             Crackmethod cracker = new Crackmethod();
-            String result = cracker.smoosh("celenium industries","polonium and astatine","gerald","cesium");
+            String result = cracker.smoosh("celenium indust","polonium and ast","gerald",e.toLowerCase());
             //System.out.print(result);
-            //System.out.print("\n");
+            //System.out.print(e.toLowerCase());
             if(result.equals(answer)) {
               System.out.println(answer);
-            }
-          }
-        }
-      }
+              break;
+            }}
+          
+       
+      
     }
-  }
+  
 }
