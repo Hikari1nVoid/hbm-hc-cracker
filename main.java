@@ -46,14 +46,11 @@ String answer = "41eb77f138ce350932e33b6b26b233df9aad0c0c80c6a49cb9a54ddd8fae3f8
           for(String d: list){
             
             Crackmethod cracker = new Crackmethod();
-            String result = cracker.smoosh(a,b,c,d);
-            System.out.print(result);
-            System.out.print("\n");
+            String result = cracker.smoosh("celenium industries","polonium and astatine","gerald","cesium");
+            //System.out.print(result);
+            //System.out.print("\n");
             if(result.equals(answer)) {
-              System.out.print(a);
-              System.out.print(b);
-              System.out.print(c);
-              System.out.print(d);
+              System.out.println(answer);
             }
           }
         }
